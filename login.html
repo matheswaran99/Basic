@@ -1,0 +1,30 @@
+<html>
+    <head>
+       <title>login</title> 
+    <script type="text/javascript">
+        function check()
+        {
+            var name1,pass1;
+            name1=document.getElementById("name").value;
+            pass1=document.getElementById("pass").value;
+            if(name1.length==0||pass1.length==0)
+            {
+                document.getElementById("para").innerHTML="Some text box will be empty!!!!";
+            }
+            else
+            {
+                alert("Your login should be processed and wait some time.....");
+            }
+        }
+    
+    </script>
+    </head>
+    <body>
+        USERNAME:<input type="text" id="name"/><br>
+
+        PASSWORD:<input type="password" id="pass"/><br>
+
+        <button onclick="check();">LOGIN</button><br>
+        <p id="para" style="color:blue;"></p>
+    </body>
+</html>

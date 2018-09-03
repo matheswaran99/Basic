@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>math_operation</title>
+        
+    </head>
+    <body>
+        <h2><i style="color:aqua">Enter the Numbers</i></h2>
+        Number1:<input type="number" id="num1" onblur="check();"/><br>
+        <span id="message"></span><br>
+        Number2:<input type="number" id="num2"/><br><br>
+        <span id="message"></span><br>
+        
+        <select id="s">
+            <option value="add">ADD</option>
+            <option value="sub">SUBTRACT</option>
+            <option value="mul">MULTIPLICATION</option>
+            <option value="div">DIVISION</option>
+        </select>
+        <button onclick="submit();">APPLY</button>
+        
+        <p style="color:orange;" id="para"></p>
+    
+
+        <script type="text/javascript">
+        var a,b;
+            function submit()
+            {
+                var a,b,c,d;
+                a=parseInt(document.getElementById("num1").value);
+                b=parseInt(document.getElementById("num2").value);
+                c=document.getElementById("s").value;
+                if(c=="add")
+                {
+                    d=a+b;
+                    alert("Addition of given number is equal to "+d);
+                }
+                else if(c=="sub")
+                {
+                    alert("Subtraction of given number is equal to "+(a-b));
+                }
+                else if(c=="mul")
+                {
+                    alert("Multiplication of given number is equal to "+(a*b));
+                }
+                else
+                {
+                    alert("Division of given number is equal to "+(a/b));
+                }
+            }
+            function check()
+            {
+                a=document.getElementById("num1").value;
+                if(a<5)
+                document.getElementById("message").innerHTML="minimum";
+                else
+                document.getElementById("message").innerHTML="maximum";
+            }
+        </script>
+    </body>
+</html>
